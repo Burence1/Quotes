@@ -1,9 +1,21 @@
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-  <div *ngFor='let quote of quotes'>
-    {{quote.text}} <br>
-    <br>
-    <app-quote-details [quotes]='quote' (toDelete)='quoteDelete($event, i)'></app-quote-details>
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <div *ngFor='let quote of quotes'>
+            {{quote.name}}<hr>
+            {{quote.text}} <br>
+            <br>
+            <app-quote-details [quotes]='quote' (toDelete)='quoteDelete($event, i)'></app-quote-details>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <app-form (addQuote)="addNewQuote($event)"></app-form>
+      </div>
+    </div>
   </div>
 </div>
