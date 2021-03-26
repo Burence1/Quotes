@@ -4,7 +4,7 @@
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <div *ngFor='let quote of quotes'>
-            {{quote.name}}<hr>
+            {{quote.name| uppercase}}<hr>
             {{quote.text}} <br>
             <br>
             <app-quote-details [quotes]='quote' (toDelete)='quoteDelete($event, i)'></app-quote-details>

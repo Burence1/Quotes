@@ -9,6 +9,14 @@ import { Quote } from './../../quote'
 export class QuoteDetailsComponent implements OnInit {
 
   @Input() quotes: Quote;
+ 
+  likebtn() {
+    this.quotes.likes++;
+  }
+  dislikebtn() {
+    this.quotes.dislikes++;
+  }
+
   @Output() toDelete = new EventEmitter<boolean>();
 
   deleteQuote(del: boolean) {
