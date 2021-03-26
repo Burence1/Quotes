@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+  <div *ngFor='let quote of quotes'>
+    {{quote.text}} <br>
+    <br>
+    <app-quote-details [quotes]='quote'></app-quote-details>
+  </div>
+  </div>
+</div>
