@@ -8,17 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuoteComponent implements OnInit {
 
-  // quotes: Quote[]= [
-  //   {text:'forever', author:'burens'}
-  // ];
-
-  // text: string;
-  // author: string;
-
   quotes: Quote[] = [
-   new Quote ('to finish, first finish', 'Burens'),
-    // {text: 'forever' , author: 'watch'},
+   new Quote (1,'to finish, first finish', 'Burens'),
   ]
+
+  quoteDelete(toDelete: any, index: any) {
+    if (toDelete) {
+      this.quotes.splice(index, 1);
+    }
+  }
 
    constructor() { }
 

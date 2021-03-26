@@ -3,7 +3,7 @@
   <div *ngFor='let quote of quotes'>
     {{quote.text}} <br>
     <br>
-    <app-quote-details [quotes]='quote'></app-quote-details>
+    <app-quote-details [quotes]='quote' (toDelete)='quoteDelete($event, i)'></app-quote-details>
   </div>
   </div>
 </div>
