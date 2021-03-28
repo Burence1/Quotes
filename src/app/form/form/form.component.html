@@ -1,4 +1,4 @@
-<!-- <div class="container shadow p-3 mb-5 bg-white rounded form-card">
+<div class="container shadow p-3 mb-5 bg-white rounded form-card">
   <div class="card card-title ">
     <div class="card-body">
       <form [formGroup]="quoteForm" (ngSubmit)="submitQuote();quoteForm.reset()">
@@ -14,14 +14,13 @@
           Author:
         </label>
         <input type="text" id="author" [(ngModel)]="newQuote.author" class="form-control" formControlName="author">
-        <button class="btn btn-success" [disabled]="!quoteForm.valid" type="submit">Add Quote</button>
+        <button class="btn btn-grad" [disabled]="!quoteForm.valid" type="submit">Add Quote</button>
       </form>
     </div>
   </div>
+</div>
 
-</div> -->
-
-<div class="container-fluid quote-card-container">
+<!-- <div class="container-fluid quote-card-container">
   <div class="card shadow p-3 mb-5 bg-white rounded card quote-card" id="new">
     <div class="card-body">
       <blockquote class="blockquote ">
@@ -59,4 +58,4 @@
       </blockquote>
     </div>
   </div>
-</div>
+</div> -->

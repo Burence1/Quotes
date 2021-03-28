@@ -4,3 +4,10 @@
   background-position: center;
   height: 20em;
 }
+
+.logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 15em;
+}

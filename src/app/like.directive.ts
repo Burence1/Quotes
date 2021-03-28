@@ -6,7 +6,7 @@ import { Directive,ElementRef } from '@angular/core';
 export class LikeDirective {
 
   constructor(elem: ElementRef) {
-    elem.nativeElement.style.backgroundColor = "#708090"
+    elem.nativeElement.style.backgroundColor = "#A9A9A9"
    }
 
 }

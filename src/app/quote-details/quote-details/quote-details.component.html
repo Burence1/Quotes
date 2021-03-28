@@ -1,10 +1,10 @@
 <div>
-  <p>{{quotes.author}}</p>
+  <cite> ~{{quotes.author}}</cite><br>
 <button class="btn btn-success" id="like" (click)='likebtn()'>{{quotes.likes}}<i
     class="bi bi-hand-thumbs-up"></i></button>
 <button class="btn btn-danger" id="dislike" (click)='dislikebtn()'>{{quotes.dislikes}}<i
     class="bi bi-hand-thumbs-down"></i></button>
-<button class="btn btn-light" (click)='deleteQuote(true)'>Delete</button>
+<button class="btn btn-grad" (click)='deleteQuote(true)'>Delete</button>
 <hr>
 </div>
 
