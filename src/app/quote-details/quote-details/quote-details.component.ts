@@ -22,8 +22,7 @@ export class QuoteDetailsComponent implements OnInit {
   deleteQuote(del: boolean) {
     this.toDelete.emit(del);
   }
-
-
+  
   constructor() { }
 
   ngOnInit(): void {
