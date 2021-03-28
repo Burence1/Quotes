@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header/header.component';
 import { LikeDirective } from './like.directive';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DaysCountPipe } from './days-count.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     QuoteDetailsComponent,
     FormComponent,
     HeaderComponent,
-    LikeDirective
+    LikeDirective,
+    DaysCountPipe
   ],
   imports: [
     BrowserModule,

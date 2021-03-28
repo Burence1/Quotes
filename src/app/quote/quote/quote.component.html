@@ -1,24 +1,28 @@
-<app-form (addQuote)="addNewQuote($event)"></app-form>
+<div>
+  <app-form (addQuote)="addNewQuote($event)"></app-form>
+</div>
 
-<div class="container quote-card-container" style="width: 18rem;">
-    <div class="card shadow p-3 mb-5 bg-white rounded card quote-card">
+<div class="container quote-card-container" style="width: 25rem;">
+  <div class="container">
+    <div class="card shadow p-3 mb-5 bg-white rounded card quote-card" id="flex">
       <div class="card-body">
-        <blockquote class="blockquote ">
-          <div *ngFor='let quote of quotes; let i = index'>
-            <p>Entered by: {{quote.name| uppercase}}</p>
-            <hr>
-            <p data-wow-delay="1s" appLike
-              *ngIf="highestLikebtn()===quote.likes && quote.likes>0">
-              {{quote.text}} <br>
-            
-            </p>
-            <p data-wow-delay="1s"
-              *ngIf="highestLikebtn()!==quote.likes || quote.likes===0">{{quote.text}}
-            </p>
-            <br>
+        <div *ngFor='let quote of quotes; let i = index'>
+          <strong>Quotted by: {{quote.name| uppercase}}</strong>
+          <hr>
+          <p appLike *ngIf="highestLikebtn()===quote.likes && quote.likes>0">
+            {{quote.text}} <br> 
+          </p>
+          <p>
+            Created: <span>{{ quote.newDate | daysCount }}</span>
+          </p>
+          <p *ngIf="highestLikebtn()!==quote.likes || quote.likes===0">{{quote.text}}
+          </p>
+          <br>
+          <div>
             <app-quote-details [quotes]='quote' (toDelete)='quoteDelete($event,i)'></app-quote-details>
           </div>
-        </blockquote>
+        </div>
       </div>
     </div>
+  </div>
 </div>

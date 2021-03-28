@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[] = [
-   new Quote (1,'Burens','just Lift', 'Burens',0,0),
-   new Quote (2,'moringa','software dev', 'lawrence',0,0)
+    new Quote(1, 'Burens', 'just Lift', 'Burens', 0, 0, new Date(2020, 3, 14)),
+    new Quote(2, 'moringa', 'software dev', 'lawrence', 0, 0, new Date(2020, 3, 14))
   ]
 
  
