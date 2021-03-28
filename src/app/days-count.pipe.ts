@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DaysCountPipe implements PipeTransform {
 
-  transform(value: any): string {
+  transform(value: any): any {
     let today: Date = new Date(); 
     let todayWithNoTime: any = new Date(
       today.getFullYear(),
@@ -22,7 +22,7 @@ export class DaysCountPipe implements PipeTransform {
       outputMessage = `${dateCounter} days ago`;
       return outputMessage;
     } else {
-      outputMessage = `0 days ago`;
+      outputMessage = `0 days `;
       return outputMessage;
     }
   }

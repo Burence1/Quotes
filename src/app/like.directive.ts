@@ -8,5 +8,4 @@ export class LikeDirective {
   constructor(elem: ElementRef) {
     elem.nativeElement.style.backgroundColor = "#A9A9A9"
    }
-
 }

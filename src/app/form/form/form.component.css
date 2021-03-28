@@ -4,11 +4,6 @@
   height: 30rem;
 } */
 
-/* #new{
-  margin-left: auto;
-  margin-right: auto;
-} */
-
 .btn-grad {background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)}
 .btn-grad {
   margin: 10px;
