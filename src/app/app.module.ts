@@ -8,6 +8,8 @@ import { QuoteDetailsComponent } from './quote-details/quote-details/quote-detai
 import { FormComponent } from './form/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header/header.component';
+import { LikeDirective } from './like.directive';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { HeaderComponent } from './header/header/header.component';
     QuoteComponent,
     QuoteDetailsComponent,
     FormComponent,
-    HeaderComponent
+    HeaderComponent,
+    LikeDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

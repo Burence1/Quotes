@@ -1,13 +1,13 @@
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <div *ngFor='let quote of quotes'>
+          <div *ngFor='let quote of quotes; let i = index'>
             {{quote.name| uppercase}}<hr>
             {{quote.text}} <br>
             <br>
-            <app-quote-details [quotes]='quote' (toDelete)='quoteDelete($event, i)'></app-quote-details>
+            <app-quote-details [quotes]='quote' (toDelete)='quoteDelete($event,i)'></app-quote-details>
           </div>
         </div>
       </div>
@@ -18,4 +18,29 @@
       </div>
     </div>
   </div>
+</div> -->
+
+<app-form (addQuote)="addNewQuote($event)"></app-form>
+
+<div class="container quote-card-container" style="width: 18rem;">
+    <div class="card shadow p-3 mb-5 bg-white rounded card quote-card">
+      <div class="card-body">
+        <blockquote class="blockquote ">
+          <div *ngFor='let quote of quotes; let i = index'>
+            <p>Entered by: {{quote.name| uppercase}}</p>
+            <hr>
+            <p data-wow-delay="1s" appLike
+              *ngIf="highestLikebtn()===quote.likes && quote.likes>0">
+              {{quote.text}} <br>
+            
+            </p>
+            <p data-wow-delay="1s"
+              *ngIf="highestLikebtn()!==quote.likes || quote.likes===0">{{quote.text}}
+            </p>
+            <br>
+            <app-quote-details [quotes]='quote' (toDelete)='quoteDelete($event,i)'></app-quote-details>
+          </div>
+        </blockquote>
+      </div>
+    </div>
 </div>
