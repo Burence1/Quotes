@@ -5,16 +5,20 @@
   <div *ngFor='let quote of quotes; let i = index'>
     <div class="card shadow p-3 mb-5 bg-white rounded card quote-card">
       <div class="card-body">
-        <strong>Quotted by: {{quote.name|uppercase}}</strong>
+        <div class="card-header">
+          <strong>Quotted by: {{quote.name|uppercase}}</strong>
+        </div>
         <hr>
-        <p appLike *ngIf="highestLikebtn()===quote.likes && quote.likes>0">
-         {{quote.text}}  <br> 
-        </p>
-        <p *ngIf="highestLikebtn()!==quote.likes || quote.likes===0">{{quote.text}}
-        </p>
-        <p>
-          Created: <span>{{ quote.newDate|daysCount}}</span>
-        </p>
+        <blockquote class="blockquote mb-0">
+          <p appLike *ngIf="highestLikebtn()===quote.likes && quote.likes>0">
+            {{quote.text}} <br>
+          </p>
+          <p *ngIf="highestLikebtn()!==quote.likes || quote.likes===0">" {{quote.text}} "
+          </p>
+          <p>
+            Created: <span>{{ quote.newDate|daysCount}}</span>
+          </p>
+        </blockquote>
         <br>
         <div>
           <app-quote-details [quotes]='quote' (toDelete)='quoteDelete($event,i)'></app-quote-details>
