@@ -1,7 +1,7 @@
 <div>
   <app-form (addQuote)="addNewQuote($event)"></app-form>
 </div>
-<div class="container quote-card-container">
+<div class="container-fluid quote-card-container">
   <div *ngFor='let quote of quotes; let i = index'>
     <div class="card shadow p-3 mb-5 bg-white rounded card quote-card">
       <div class="card-body">
