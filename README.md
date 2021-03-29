@@ -18,7 +18,7 @@ multiple celebrity personnels}
 * A section displaying the existing quotes
 
 ## Known Bugs
-{The project has a bug in the dayCount pipe as it lags behind by one month}
+{Fortunately, the project has no known bugs}
 ## Technologies Used
 {The Good Vibes has been developed using a variety of technologies ranging from markup languages to stylesheets and typescript alongside Angular}
 * HTML
