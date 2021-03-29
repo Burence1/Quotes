@@ -9,18 +9,15 @@ export class DaysCountPipe implements PipeTransform {
     let today: Date = new Date(); 
     let todayWithNoTime: any = new Date(today.getFullYear(),today.getMonth(),today.getDate()
     );
+    const secondsInDay = 86400;
     var dateDifference = Math.abs(value-todayWithNoTime);
-    const secondsInDay = 86400; 
     var dateDifferenceSeconds = dateDifference * 0.001; 
     var dateCounter = dateDifferenceSeconds / secondsInDay;
-    let outputMessage: string;
 
     if (dateCounter >= 1 && value < todayWithNoTime) {
-      outputMessage = `${dateCounter} days ago`;
-      return outputMessage;
+      return dateCounter + 'days ago';
     } else {
-      outputMessage = `0 days `;
-      return outputMessage;
+      return "0 days";
     }
   }
 

@@ -28,19 +28,19 @@ export class QuoteComponent implements OnInit {
     this.quotes.unshift(quotes)
   }
 
-  firstNo: number
-  lastNo: number
-  counter: number
+  first: any
+  last: any
+  count: any
 
   highestLikebtn() {
-    this.firstNo = 0
-    this.lastNo = 0
+    this.first = 0
+    this.last = 0
 
-    for (this.counter = 0; this.counter < this.quotes.length; this.counter++) {
-      this.lastNo = this.quotes[this.counter].likes;
-      if (this.lastNo > this.firstNo) { this.firstNo = this.lastNo }
+    for (this.count = 0; this.count < this.quotes.length; this.count++) {
+      this.last = this.quotes[this.count].likes;
+      if (this.last > this.first) { this.first = this.last }
     }
-    return this.firstNo
+    return this.first
   }
   
    constructor() { }
